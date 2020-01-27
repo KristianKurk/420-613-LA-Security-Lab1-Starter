@@ -19,7 +19,18 @@
                 <li>@Html.ActionLink("About", "About", "Home", null, new { @class = "nav-item nav-link" })</li>
                 <li>@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "nav-item nav-link" })</li>
                 <li>@Html.ActionLink("Inventory Pricing", "Index", "Inventory", null, new { @class = "nav-item nav-link" })</li>
+                @if (!Request.IsAuthenticated)
+                {
+                    <li>@Html.ActionLink("Login", "Login", "Account", null, new { @class = "nav-item nav-link" })</li>
+                }
+                else
+                {
+                    <li>@Html.ActionLink("Logout", "Logout", "Account", null, new { @class = "nav-item nav-link" })</li>
+
+                }
             </ul>
+                
+
         </div>
     </nav>
     </div>

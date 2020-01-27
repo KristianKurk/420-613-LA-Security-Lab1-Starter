@@ -7,12 +7,12 @@ using SecurityLab1_Starter.Models;
 
 namespace SecurityLab1_Starter.Controllers
 {
+    [Authorize]
     public class InventoryController : Controller
     {
-        // GET: Inventory
         public ActionResult Index()
         {
-            throw new Exception();
+            //throw new Exception();
             return View();
         }
 
